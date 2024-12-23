@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cgthrrwjb4yim"
+path="res://.godot/imported/Mother 3 - 200 Beach Combing.ogg-6a450ff1e03280c531b736676622726c.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 200 Beach Combing.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 200 Beach Combing.ogg-6a450ff1e03280c531b736676622726c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

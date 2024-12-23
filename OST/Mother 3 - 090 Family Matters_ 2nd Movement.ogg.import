@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5pfdqk3q4phu"
+path="res://.godot/imported/Mother 3 - 090 Family Matters_ 2nd Movement.ogg-f525217ba55e780e3a36a01d2412068e.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 090 Family Matters_ 2nd Movement.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 090 Family Matters_ 2nd Movement.ogg-f525217ba55e780e3a36a01d2412068e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

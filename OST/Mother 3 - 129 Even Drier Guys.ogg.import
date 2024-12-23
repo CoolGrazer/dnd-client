@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6k37n1h1mxin"
+path="res://.godot/imported/Mother 3 - 129 Even Drier Guys.ogg-ef7e424ba03e9fc884d8f3b474aaf2aa.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 129 Even Drier Guys.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 129 Even Drier Guys.ogg-ef7e424ba03e9fc884d8f3b474aaf2aa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

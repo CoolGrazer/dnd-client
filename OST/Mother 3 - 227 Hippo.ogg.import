@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7fmn8hivan5k"
+path="res://.godot/imported/Mother 3 - 227 Hippo.ogg-7f1216162e3266550778032e3571201e.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 227 Hippo.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 227 Hippo.ogg-7f1216162e3266550778032e3571201e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

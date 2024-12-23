@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbsge772bvsl3"
+path="res://.godot/imported/Mother 3 - 178 She Was Like a Sunflower.ogg-c9d8acda9b370039942500759ae3bc6f.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 178 She Was Like a Sunflower.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 178 She Was Like a Sunflower.ogg-c9d8acda9b370039942500759ae3bc6f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6rfpea7r3hq4"
+path="res://.godot/imported/Mother 3 - 171 Right Left Light Reft.ogg-9a1ad6ac06138a7c6cfdd10e112c8d77.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 171 Right Left Light Reft.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 171 Right Left Light Reft.ogg-9a1ad6ac06138a7c6cfdd10e112c8d77.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

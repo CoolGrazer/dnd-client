@@ -1,0 +1,163 @@
+[gd_scene load_steps=15 format=3 uid="uid://blungh4ipk1b1"]
+
+[ext_resource type="Texture2D" uid="uid://dv1u3dr8qsvg8" path="res://Sprites/DiagBox.png" id="1_o52po"]
+[ext_resource type="FontFile" uid="uid://bp3aecm727v05" path="res://EarthMommaRegular-ZGrK.ttf" id="2_10udh"]
+[ext_resource type="Texture2D" uid="uid://cgkicsftyf2cx" path="res://Sprites/ArrowThingy.png" id="3_mwddw"]
+
+[sub_resource type="GDScript" id="GDScript_bnnbr"]
+script/source = "extends Sprite2D
+
+var timer = 2
+
+var indx = -1
+
+
+
+var dialouge = [\"Because, we are [color=blue]Sonic Heroes!\",\"Tap into your forces, Sonic!\",\"I'm gonna become Unleashed!\",\"Sonic, there's two of you...\"
+,\"Lucas and company earned 4546 experience points!\",\"A Fenomeno suddenly attacked!\",\"Boney attacks!\",\"Duster attacks!\"
+,\"The Fenomeno leapt forward\",\"Lucas attacks!\",\"Kumatora attacks!\",\"The Fenomeno vanished into thin air!\"]
+
+func _physics_process(delta):
+	if timer == 0:
+		
+		if $RichTextLabel.visible_ratio == 1:
+			pass
+		else:
+			$RichTextLabel.visible_characters += 1
+		timer = 2
+	
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		indx += 1
+		$RichTextLabel.visible_characters = 0
+		$RichTextLabel.text = dialouge[indx]
+		
+	
+	timer -= 1
+"
+
+[sub_resource type="Shader" id="Shader_kcvyh"]
+code = "shader_type canvas_item;
+
+uniform vec4 a : source_color;
+uniform vec4 b : source_color;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	if (COLOR.a < 0.5)
+	{
+		COLOR.a = 0.0;
+	}
+	if (COLOR.a > 0.5)
+	{
+		COLOR.a = 1.0;
+	}
+
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sn6vr"]
+shader = SubResource("Shader_kcvyh")
+shader_parameter/a = Color(0.223529, 0.207843, 0.2, 1)
+shader_parameter/b = Color(0.678431, 0.627451, 0.603922, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_7hyvs"]
+base_font = ExtResource("2_10udh")
+spacing_top = 7
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6cyw"]
+atlas = ExtResource("3_mwddw")
+region = Rect2(8, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1myf2"]
+atlas = ExtResource("3_mwddw")
+region = Rect2(16, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ejv0"]
+atlas = ExtResource("3_mwddw")
+region = Rect2(24, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m41rc"]
+atlas = ExtResource("3_mwddw")
+region = Rect2(32, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rerpm"]
+atlas = ExtResource("3_mwddw")
+region = Rect2(24, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq13t"]
+atlas = ExtResource("3_mwddw")
+region = Rect2(16, 0, 8, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2s6s3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6cyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1myf2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ejv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m41rc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rerpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq13t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="DiagBox" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_o52po")
+script = SubResource("GDScript_bnnbr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+material = SubResource("ShaderMaterial_sn6vr")
+offset_left = -110.0
+offset_top = -12.0
+offset_right = 110.0
+offset_bottom = 11.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("FontVariation_7hyvs")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 8
+theme_override_font_sizes/italics_font_size = 8
+theme_override_font_sizes/bold_italics_font_size = 8
+theme_override_font_sizes/mono_font_size = 8
+bbcode_enabled = true
+text = "I'm so good at programing shaders!"
+scroll_active = false
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -109.0
+offset_top = -12.0
+offset_right = 111.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_7hyvs")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = -0.0588235
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(106, 6)
+sprite_frames = SubResource("SpriteFrames_2s6s3")
+frame_progress = 0.00657723

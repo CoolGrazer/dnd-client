@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bov8mn0sb5klb"
+path="res://.godot/imported/Mother 3 - 025 The Enemy Attacks!.ogg-b1cb67320ee3cdcf9157e0efce3eb4f8.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 025 The Enemy Attacks!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 025 The Enemy Attacks!.ogg-b1cb67320ee3cdcf9157e0efce3eb4f8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

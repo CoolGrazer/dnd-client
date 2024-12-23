@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dgmavdix7vvvn"
+path="res://.godot/imported/Mother 3 - 092 Fanfare of the Noble Vase.ogg-52c10bb4222a6f9cf4d005fd31b0b4a2.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 092 Fanfare of the Noble Vase.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 092 Fanfare of the Noble Vase.ogg-52c10bb4222a6f9cf4d005fd31b0b4a2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

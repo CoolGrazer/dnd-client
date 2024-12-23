@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://diqabiguhdhw2"
+path="res://.godot/imported/Mother 3 - 240 Porky's Porkies.ogg-68d37a0c17bb066ac6f03dab9bed4b85.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 240 Porky's Porkies.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 240 Porky's Porkies.ogg-68d37a0c17bb066ac6f03dab9bed4b85.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cokhepxiyo1or"
+path="res://.godot/imported/Mother 3 - 207 Is Anyone There_.ogg-4c8a9c9099c14eb7af492a065110ebe3.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 207 Is Anyone There_.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 207 Is Anyone There_.ogg-4c8a9c9099c14eb7af492a065110ebe3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

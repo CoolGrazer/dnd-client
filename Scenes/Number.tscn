@@ -1,0 +1,130 @@
+[gd_scene load_steps=3 format=3 uid="uid://rndlwbf742sn"]
+
+[ext_resource type="Texture2D" uid="uid://dwkmg1owijqi8" path="res://Sprites/Rotary.png" id="1_ni0y6"]
+
+[sub_resource type="GDScript" id="GDScript_7dl2n"]
+script/source = "extends Sprite2D
+
+@export var framesPerNumber : float = 10.5
+var frameTimer : int = -1
+
+var extra : float = 0.0
+
+
+@export var startingNumber = 5
+
+@export var multiplyBase = 1
+
+var currentNumber = 0
+
+@export var direction : int = 0
+
+var targetNumber = 0
+
+
+signal numberFinished
+
+func _ready():
+	frame = startingNumber * 8
+	currentNumber = startingNumber
+	
+
+func _physics_process(delta):
+	
+	_recalculateCurrent()
+	
+	if frameTimer == 0:
+		
+		frame = _checkFrames()
+		
+		if direction == -1:
+			frame -= 1
+		elif direction == 1:
+			frame += 1
+		
+		if framesPerNumber == 0.5:
+			if direction == -1:
+				frame -= 1
+			elif direction == 1:
+				frame += 1
+		_resetTimer()
+	elif frameTimer > -1:
+		frameTimer -= 1
+		
+	
+		
+	
+	
+	
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		
+		_subtractOne()
+	
+	
+	
+	#currentNumber *= multiplyBase
+
+
+func _resetTimer():
+	_recalculateCurrent()
+
+	emit_signal(\"numberFinished\")
+	if currentNumber == targetNumber:
+		
+		frameTimer = -1
+		direction = 0
+		return
+	
+	
+	if extra == 0:
+		return
+	
+	if fmod(extra,1) == 1:
+		
+		_compensateDecimal()
+	
+
+func _compensateDecimal():
+	frame += 1
+	extra = 0
+
+func _checkFrames():
+	if frame == 79 and direction == 1:
+		return 0
+	elif frame == 0 and direction == -1:
+		return 79
+	
+	return frame
+
+func _subtractOne():
+	
+	if !frameTimer == -1:
+		
+		return
+	
+	_resetTimer()
+	direction = -1
+	targetNumber = currentNumber - 1
+	if targetNumber == -1:
+		targetNumber = 9
+
+func _addOne():
+	_resetTimer()
+	direction = 1
+
+func _recalculateCurrent():
+	if direction == 1:
+		currentNumber = floor(frame / 8.0)
+	elif direction == -1:
+		currentNumber = ceil(frame / 8.0)
+	if currentNumber == 10:
+		currentNumber = 0
+"
+
+[node name="Number" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_ni0y6")
+hframes = 80
+frame = 7
+script = SubResource("GDScript_7dl2n")
+framesPerNumber = 2.0

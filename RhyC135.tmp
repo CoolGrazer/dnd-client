@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccdlwimx3tdh"]
+
+[sub_resource type="GDScript" id="GDScript_cr4ps"]
+script/source = "extends Node2D
+
+var amount : int = 0
+@onready var notes = []
+var angle = 0
+@export var speed : float = 1
+@export var distance : float = 1
+
+var lookUpLA = [0,24,48,72,96,120,144,168,192,216,240,264,288,312,336,360]
+var currentActive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+var lookUpActives = [0,4,8,12,14
+					,1,5,9,13,2
+					,3,7,11,6,10,15]
+
+var a = 0
+
+var tmpSpeed = 0
+var comboed = false
+
+var transitionBetweenNotes : float = 0
+
+var justSpawned : int = 0
+
+func _ready():
+	for i in range(amount):
+		add_child(preload(\"res://Note.tscn\").instantiate())
+	notes = get_children()
+	
+	#for i in range(15):
+	#	_addNote(notes.size())
+	
+
+func _physics_process(delta):
+	transitionBetweenNotes = lerp(transitionBetweenNotes,1.0,0.35)
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		if a > 0:
+			_addNote(lookUpActives[a])
+		a += 1
+		tmpSpeed += speed * 100 / (float(notes.size()) / 100.0)
+		tmpSpeed = clamp(tmpSpeed,0,speed * 10)
+		if a == 16:
+			comboed = true
+	
+	tmpSpeed = move_toward(tmpSpeed,0.0,0.5)
+	
+	
+	
+	if comboed == true:
+		distance = move_toward(distance,500,25)
+		if distance > 250:
+			pass
+	
+	angle += (speed + tmpSpeed) / 100
+	var activeIndex = 0
+	
+	var noteIndex = 0
+	# left under right over
+	for x in currentActive:
+		
+		if x == 1:
+			
+			
+			var localA = deg_to_rad(lookUpLA[activeIndex])
+			var lastLA = deg_to_rad(lookUpLA[activeIndex - 1])
+			
+			var n = notes[noteIndex]
+			# add interp, but i dont thiunk is project is survivng yo
+			var neededLocation = Vector2(cos(localA + angle),sin(localA + angle) * 0.25) * distance
+			var lastLocation = Vector2(cos(lastLA + angle),sin(lastLA + angle) * 0.25) * distance
+			
+			if activeIndex == justSpawned:
+				n.position = lerp(lastLocation,neededLocation,transitionBetweenNotes)
+			else:
+				n.position = neededLocation
+			
+			#n.position = n.position.rotated(deg_to_rad(sin(angle * 1) * 15))
+			
+			n.z_index = floor(n.position.y * 1)
+			
+			noteIndex += 1
+			
+		activeIndex += 1
+	
+	
+	
+
+
+func _addNote(index):
+	add_child(preload(\"res://Note.tscn\").instantiate())
+	currentActive[index] = 1
+	notes = get_children()
+	transitionBetweenNotes = 0
+	justSpawned = index
+	print(justSpawned)
+
+"
+
+[node name="Center" type="Node2D"]
+script = SubResource("GDScript_cr4ps")
+distance = 50.0

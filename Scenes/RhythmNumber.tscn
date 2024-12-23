@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmub3r0t7b6mc"]
+
+[ext_resource type="FontFile" uid="uid://bbdd7c8sn1m5" path="res://Sprites/RegularNumber.png" id="1_6pgjl"]
+
+[sub_resource type="GDScript" id="GDScript_gx185"]
+script/source = "extends Node2D
+
+var vel = Vector2.ZERO
+var gravity = 0.1
+
+var frozen = false
+
+func _changeLabel(text,color):
+	$BattleNumber.text = text
+	$BattleNumber.material.set_shader_parameter(\"numberPallete\",color)
+
+func _ready():
+	
+	vel.x = randf_range(-2,2)
+	vel.y = randf_range(-3,-1)
+
+func _physics_process(delta):
+	var n = get_tree().get_nodes_in_group(\"Numbers\").size()
+	
+	if position.y > 180:
+		queue_free()
+	if abs(position.x) > 120:
+		queue_free()
+	
+	if frozen == true:
+		return
+	
+	position += vel
+	vel.y += gravity
+	
+"
+
+[sub_resource type="Shader" id="Shader_5mc13"]
+code = "shader_type canvas_item;
+
+uniform float numberPallete;
+uniform float flickerAmount;
+
+uniform vec4 regular : source_color;
+uniform vec4 hp : source_color;
+uniform vec4 pp : source_color;
+
+void vertex() {
+	
+	// Called for every vertex the material is visible on.
+	
+}
+
+void fragment() {
+	
+	
+	
+	
+	
+	if (COLOR == regular)
+	{
+		if (numberPallete > 0.0)
+		{
+			COLOR = hp;
+		}
+		else if (numberPallete < 0.0)
+		{
+			COLOR = mix(regular,pp,abs(numberPallete));
+		}
+	
+	if (COLOR.a == 1.0)
+	{
+		COLOR.a = flickerAmount;
+	}
+		
+	}
+	
+	
+}
+
+//void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kqtbs"]
+shader = SubResource("Shader_5mc13")
+shader_parameter/numberPallete = 0.0
+shader_parameter/flickerAmount = 1.0
+shader_parameter/regular = Color(0.972549, 0.972549, 0.972549, 1)
+shader_parameter/hp = Color(0, 1, 0, 1)
+shader_parameter/pp = Color(0.815686, 0.690196, 0.972549, 1)
+
+[sub_resource type="GDScript" id="GDScript_4aeah"]
+script/source = "extends Label
+
+# -11 to -28
+
+# 17 px up
+# 22 frames with an ease out
+
+
+# give it like 60 frames to wait and we'll see
+
+
+"
+
+[node name="Node2D" type="Node2D" groups=["Numbers"]]
+z_index = 2
+texture_filter = 1
+script = SubResource("GDScript_gx185")
+
+[node name="BattleNumber" type="Label" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_kqtbs")
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_6pgjl")
+theme_override_font_sizes/font_size = 9
+text = "23"
+script = SubResource("GDScript_4aeah")

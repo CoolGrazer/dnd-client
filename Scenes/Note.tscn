@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://npvaagv1cam6"]
+
+[ext_resource type="Texture2D" uid="uid://dcn5btd0d8kiq" path="res://Sprites/MusicNote.png" id="1_cjfb6"]
+
+[node name="Note" type="Sprite2D" groups=["Note"]]
+texture_filter = 1
+texture = ExtResource("1_cjfb6")

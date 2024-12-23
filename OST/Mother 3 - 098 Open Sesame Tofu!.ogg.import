@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://coot3rfoguq7s"
+path="res://.godot/imported/Mother 3 - 098 Open Sesame Tofu!.ogg-9d4a2ab424821c2526914379af7d3e66.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 098 Open Sesame Tofu!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 098 Open Sesame Tofu!.ogg-9d4a2ab424821c2526914379af7d3e66.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

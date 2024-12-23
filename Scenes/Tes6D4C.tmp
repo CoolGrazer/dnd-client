@@ -1,0 +1,303 @@
+[gd_scene load_steps=31 format=3 uid="uid://cen1ctaxcic45"]
+
+[ext_resource type="PackedScene" uid="uid://ccdlwimx3tdh" path="res://Scenes/Rhythm.tscn" id="1_if7uq"]
+[ext_resource type="Texture2D" uid="uid://m1bnp7ognm6o" path="res://Sprites/Mecha.png" id="1_rquum"]
+[ext_resource type="Script" path="res://Scripts/Conductor.gd" id="3_5j00j"]
+[ext_resource type="Shader" path="res://Scenes/EnemyKill.gdshader" id="3_8728q"]
+[ext_resource type="AudioStream" uid="uid://8i0t34iei17s" path="res://OST/Mother 3 - 115 Drago!_.ogg" id="3_e7nn5"]
+[ext_resource type="Texture2D" uid="uid://2tbevk7dqh2p" path="res://Sprites/Drago.png" id="4_mfrbp"]
+[ext_resource type="Script" path="res://Scripts/ShakeEnemy.gd" id="5_7v1bc"]
+[ext_resource type="Texture2D" uid="uid://d4asip8m6fash" path="res://Sprites/BattleCard.png" id="6_lpw2i"]
+[ext_resource type="PackedScene" uid="uid://csou6msrsgtu8" path="res://Scenes/Odometer.tscn" id="7_cltbm"]
+[ext_resource type="FontFile" uid="uid://bp3aecm727v05" path="res://EarthMommaRegular-ZGrK.ttf" id="9_mjtkd"]
+[ext_resource type="AudioStream" uid="uid://dmsqc6008dfhr" path="res://SFX/HealFood.ogg" id="10_jkqjm"]
+[ext_resource type="AudioStream" uid="uid://d183vwg8adyhh" path="res://SFX/Enemy/MechaHit.ogg" id="11_0w7i1"]
+
+[sub_resource type="GDScript" id="GDScript_3shcs"]
+script/source = "extends Node2D
+
+@onready var client = Player.new()
+
+signal damageDealt(amt)
+
+func _ready():
+	$Odometer.currentValue = client.health
+	$Odometer._setValue($Odometer.currentValue)
+	Global.Players.append(client)
+
+func _physics_process(delta):
+	
+	var targetHealth = client.targetHealth
+	var size = $Enemy.get_rect().size.x
+	size = floor(size / 10) * 10
+	size /= 1.5
+	
+	
+	$Center.resetDistance = size
+	
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		if Input.is_key_pressed(KEY_SHIFT):
+			
+			_statusUpdate(30,0,randi_range(1,4))
+			$SFX/Heal.play()
+		else:
+			_statusUpdate(-Global._calculateDamageToPlayer(0,0,1),0,randi_range(1,4))
+			$SFX/Enemy.play()
+	
+	var flavorText
+	if targetHealth > 500:
+		flavorText = \"\\nSweet!\"
+	elif targetHealth > 350:
+		flavorText = \"\\nNothing to worry about!\"
+	elif targetHealth > 200:
+		flavorText = \"\\nBit of a kick!\"
+	elif targetHealth > 100:
+		flavorText = \"\\nYou can heal now!\"
+	elif targetHealth > 50:
+		flavorText = \"\\nGuys?\"
+	elif targetHealth > 0:
+		flavorText = \"\\n..This is fine.\"
+	else:
+		flavorText = \"\\nAHHH HELP ME I'M DYING\"
+	$Label.text = str(client.targetHealth) + flavorText
+	$Odometer.goToValue = client.targetHealth
+	client.health = $Odometer.currentValue
+	$Center.offense = client.mStats[0]
+
+func _statusUpdate(number,mode,player):
+	var v
+	
+	if number < 1: v = 0
+	else: v = 1
+	
+	var battleNumber = preload((\"res://Scenes/BattleNumber.tscn\")).instantiate()
+	add_child(battleNumber)
+	battleNumber.position = Vector2(111,141)
+	battleNumber._changeLabel(str(abs(number)),v)
+	client.playerTargetHealth += number
+	
+	client.playerTargetHealth = clamp(client.playerTargetHealth,0,999)
+	
+	if number < 0:
+		emit_signal(\"damageDealt\",number)
+
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82va3"]
+atlas = ExtResource("1_rquum")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o1yl"]
+atlas = ExtResource("1_rquum")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hitw4"]
+atlas = ExtResource("1_rquum")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yaq33"]
+atlas = ExtResource("1_rquum")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q47kg"]
+atlas = ExtResource("1_rquum")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i713h"]
+atlas = ExtResource("1_rquum")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmq47"]
+atlas = ExtResource("1_rquum")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqxwn"]
+atlas = ExtResource("1_rquum")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjxx4"]
+atlas = ExtResource("1_rquum")
+region = Rect2(2048, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc2fg"]
+atlas = ExtResource("1_rquum")
+region = Rect2(2304, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djpp7"]
+atlas = ExtResource("1_rquum")
+region = Rect2(2560, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lica"]
+atlas = ExtResource("1_rquum")
+region = Rect2(2816, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8xov"]
+atlas = ExtResource("1_rquum")
+region = Rect2(3072, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbt26"]
+atlas = ExtResource("1_rquum")
+region = Rect2(3328, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3wfey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82va3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o1yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hitw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yaq33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q47kg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i713h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmq47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqxwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjxx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc2fg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djpp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lica")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8xov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbt26")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gmaka"]
+shader = ExtResource("3_8728q")
+shader_parameter/mixRate = 0.0
+
+[sub_resource type="FontVariation" id="FontVariation_qdk6u"]
+base_font = ExtResource("9_mjtkd")
+spacing_top = 7
+
+[node name="ClientView" type="Node2D"]
+texture_filter = 1
+script = SubResource("GDScript_3shcs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -201
+position = Vector2(120, 80)
+sprite_frames = SubResource("SpriteFrames_3wfey")
+autoplay = "default"
+
+[node name="Center" parent="." instance=ExtResource("1_if7uq")]
+position = Vector2(120, 80)
+speed = 2.0
+distance = 45.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e7nn5")
+volume_db = 8.0
+autoplay = true
+script = ExtResource("3_5j00j")
+bpm = 240
+
+[node name="Enemy" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_gmaka")
+position = Vector2(120, 64)
+texture = ExtResource("4_mfrbp")
+script = ExtResource("5_7v1bc")
+
+[node name="Label4" type="Label" parent="Enemy"]
+offset_left = 56.0
+offset_top = -64.0
+offset_right = 132.0
+offset_bottom = -41.0
+theme_override_fonts/font = SubResource("FontVariation_qdk6u")
+theme_override_font_sizes/font_size = 8
+
+[node name="OffPlayerR" type="Sprite2D" parent="."]
+position = Vector2(210, 143)
+texture = ExtResource("6_lpw2i")
+
+[node name="BattleCard3" type="Sprite2D" parent="."]
+position = Vector2(30, 143)
+texture = ExtResource("6_lpw2i")
+
+[node name="Odometer" parent="." instance=ExtResource("7_cltbm")]
+z_index = 1
+z_as_relative = false
+position = Vector2(119, 145)
+setFrameTimer = 2.0
+
+[node name="Name" type="Label" parent="Odometer"]
+offset_left = -29.0
+offset_top = -18.0
+offset_right = 31.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_qdk6u")
+theme_override_font_sizes/font_size = 8
+text = "Marcell"
+horizontal_alignment = 1
+
+[node name="ClientPlayer" type="Sprite2D" parent="Odometer"]
+z_index = -1
+position = Vector2(1, -2)
+texture = ExtResource("6_lpw2i")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 76.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("FontVariation_qdk6u")
+theme_override_font_sizes/font_size = 8
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 64.0
+offset_right = 140.0
+offset_bottom = 23.0
+theme_override_fonts/font = SubResource("FontVariation_qdk6u")
+theme_override_font_sizes/font_size = 8
+text = "<-True Health."
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 167.0
+offset_top = 19.0
+offset_right = 243.0
+offset_bottom = 42.0
+theme_override_fonts/font = SubResource("FontVariation_qdk6u")
+theme_override_font_sizes/font_size = 8
+text = "^ Enemy Health
+"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="Heal" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("10_jkqjm")
+
+[node name="Enemy" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("11_0w7i1")
+volume_db = 8.0
+
+[connection signal="damageDealt" from="." to="Odometer" method="_on_client_view_damage_dealt"]
+[connection signal="hit" from="Center" to="Enemy" method="_on_center_hit"]
+[connection signal="beat" from="Music" to="Center" method="_on_audio_stream_player_beat"]
+[connection signal="distanceFromBeat" from="Music" to="Center" method="_on_audio_stream_player_distance_from_beat"]

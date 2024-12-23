@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://36w8atbu0cj"
+path="res://.godot/imported/Mother 3 - 225 Theme of DCMC.ogg-1e6ef27af940ff188d817e0b3447e8f2.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 225 Theme of DCMC.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 225 Theme of DCMC.ogg-1e6ef27af940ff188d817e0b3447e8f2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

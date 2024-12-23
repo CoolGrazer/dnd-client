@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://pe4xxktruigd"
+path="res://.godot/imported/Mother 3 - 193 Hustle for Pride.ogg-91d0ab28eebe35e6a6a37603d8d583cb.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 193 Hustle for Pride.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 193 Hustle for Pride.ogg-91d0ab28eebe35e6a6a37603d8d583cb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

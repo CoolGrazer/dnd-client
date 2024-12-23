@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7i11dovmf68y"
+path="res://.godot/imported/Mother 3 - 028 Enter the Pigmasks!.ogg-d6cfefe1dd82c99eabfbbf26cb55282c.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 028 Enter the Pigmasks!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 028 Enter the Pigmasks!.ogg-d6cfefe1dd82c99eabfbbf26cb55282c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

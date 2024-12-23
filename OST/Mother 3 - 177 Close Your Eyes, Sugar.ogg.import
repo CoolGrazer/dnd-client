@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://7i8sxwfc53ei"
+path="res://.godot/imported/Mother 3 - 177 Close Your Eyes, Sugar.ogg-ed1b330513ac62e15da67d14b738c45f.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 177 Close Your Eyes, Sugar.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 177 Close Your Eyes, Sugar.ogg-ed1b330513ac62e15da67d14b738c45f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

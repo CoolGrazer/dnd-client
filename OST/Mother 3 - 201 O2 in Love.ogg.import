@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://crx72pf87umo3"
+path="res://.godot/imported/Mother 3 - 201 O2 in Love.ogg-f1d569d6ef5a37952e7d03b2d2c9c6ea.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 201 O2 in Love.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 201 O2 in Love.ogg-f1d569d6ef5a37952e7d03b2d2c9c6ea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

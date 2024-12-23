@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsgrp1iv84ey6"
+path="res://.godot/imported/Mother 3 - 202 Tanetane Island.ogg-55462f8617f71016c3aaf5e7994be354.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 202 Tanetane Island.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 202 Tanetane Island.ogg-55462f8617f71016c3aaf5e7994be354.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ccsnra5qjrrny"
+path="res://.godot/imported/Mother 3 - 059 Much Better!.ogg-8d1d03a4838e1739fc1a9c8a88417f5a.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 059 Much Better!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 059 Much Better!.ogg-8d1d03a4838e1739fc1a9c8a88417f5a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

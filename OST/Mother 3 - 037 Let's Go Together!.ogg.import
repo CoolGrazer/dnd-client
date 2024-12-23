@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cijojxlaaxmfu"
+path="res://.godot/imported/Mother 3 - 037 Let's Go Together!.ogg-5f6f2b232f6f544c2cdc061f25b08543.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 037 Let's Go Together!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 037 Let's Go Together!.ogg-5f6f2b232f6f544c2cdc061f25b08543.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

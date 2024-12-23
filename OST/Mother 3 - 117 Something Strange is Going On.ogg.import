@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b3lex5w24imas"
+path="res://.godot/imported/Mother 3 - 117 Something Strange is Going On.ogg-66ca9d0471439839ba8b7768943b2ead.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 117 Something Strange is Going On.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 117 Something Strange is Going On.ogg-66ca9d0471439839ba8b7768943b2ead.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

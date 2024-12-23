@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cu3cwhjolvp1p"
+path="res://.godot/imported/Mother 3 - 112 Laugh! Be Happy!.ogg-75e48f91ad7a18e412c72cb38d7880ea.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 112 Laugh! Be Happy!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 112 Laugh! Be Happy!.ogg-75e48f91ad7a18e412c72cb38d7880ea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

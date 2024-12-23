@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c32rquneaygc2"
+path="res://.godot/imported/Mother 3 - 045 MOTHER 3 Love Theme.ogg-aa97d481a5ce377ea7c756f7901ae404.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 045 MOTHER 3 Love Theme.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 045 MOTHER 3 Love Theme.ogg-aa97d481a5ce377ea7c756f7901ae404.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

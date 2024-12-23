@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c7o0kgqr63k1i"
+path="res://.godot/imported/Mother 3 - 157 Adolescence (Toilet Cow's Rec.).ogg-f0017a7642ae4e9bb6b6e72e89165501.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 157 Adolescence (Toilet Cow's Rec.).ogg"
+dest_files=["res://.godot/imported/Mother 3 - 157 Adolescence (Toilet Cow's Rec.).ogg-f0017a7642ae4e9bb6b6e72e89165501.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

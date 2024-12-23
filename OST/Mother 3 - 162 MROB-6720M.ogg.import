@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bjqt6ssdvvybx"
+path="res://.godot/imported/Mother 3 - 162 MROB-6720M.ogg-40cd4780245619cf0d881feece1398ad.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 162 MROB-6720M.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 162 MROB-6720M.ogg-40cd4780245619cf0d881feece1398ad.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

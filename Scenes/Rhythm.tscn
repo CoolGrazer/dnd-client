@@ -1,0 +1,271 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccdlwimx3tdh"]
+
+[ext_resource type="AudioStream" uid="uid://d4etq40u7o8s1" path="res://16Hit.wav" id="1_doe7n"]
+[ext_resource type="AudioStream" uid="uid://bfgj7vtyvr3ua" path="res://Sprites/0550 - Generic Attack Sound.mp3" id="2_58nms"]
+
+[sub_resource type="GDScript" id="GDScript_cr4ps"]
+script/source = "extends Node2D
+
+var amount : int = 0
+@onready var notes = []
+var angle = 0
+@export var speed : float = 1
+@export var distance : float = 1
+
+var lookUpLA = [0,24,48,72,96,120,144,168,192,216,240,264,288,312,336,360]
+var currentActive = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
+var lookUpActives = [0,4,8,12,14
+					,1,5,9,13,2
+					,3,7,11,6,10,15]
+
+var fallVelocites = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+
+var a = 0
+
+var tmpSpeed = 0
+var States = {Nothing = 0,InCombo = 1,FinishedCombo = 2,FailedCombo = 3}
+var State : int = 0
+var comboed = false
+
+var transitionBetweenNotes : float = 0.1
+
+var justSpawned : int = 0
+
+@export var pathsForAudio = [\"\",\"\"]
+
+var whichBeat = 0
+
+var beatDifference = 0
+
+@export var attack = false
+
+@export var changePerHit = 0
+
+@onready var resetDistance : float = distance
+
+@onready var distTarget = distance
+
+var offense = 0
+
+signal hit(number,damage)
+
+func _ready():
+	for i in range(amount):
+		add_child(preload(\"res://Scenes/Note.tscn\").instantiate())
+	notes = $Notes.get_children()
+	
+	#for i in range(15):
+	#	_addNote(notes.size())
+	
+
+func _physics_process(delta):
+	
+	
+	transitionBetweenNotes = lerp(transitionBetweenNotes,1.0,0.35)
+
+	
+	if Input.is_action_just_pressed(\"ui_accept\"):
+		return
+		if !abs(beatDifference) < 0.25 and Input.is_action_pressed(\"ui_down\"):
+			emit_signal(\"hit\",-52)
+			State = States.FailedCombo
+			var i = 0
+			for x in fallVelocites:
+				fallVelocites[i] = randf_range(-2,5)
+				i += 1
+			$Hits.pitch_scale = 0.5
+			return
+			pass
+		
+		if a == 0:
+			State = States.InCombo
+		speed = 1.5
+		_hit()
+	
+	if Input.is_action_just_pressed(\"ui_text_backspace\"):
+		if !abs(beatDifference) < 0.25:
+			
+			#State = States.FailedCombo
+			#var i = 0
+			#for x in fallVelocites:
+			#	fallVelocites[i] = randf_range(-2,3)
+			#	i += 1
+			#$Hits.pitch_scale = 0.5
+			#return
+			pass
+		
+		if a == 0:
+			State = States.InCombo
+		#speed = 15
+		_hit()
+	
+	tmpSpeed = move_toward(tmpSpeed,0.0,0.5)
+	
+	_handleNoteMovement()
+	
+	if State == States.FinishedCombo:
+		distance = move_toward(distance,500,10)
+		if distance > 250:
+			a = 0
+			get_tree().call_group(\"Note\",\"queue_free\")
+			var i = 0
+			for x in currentActive:
+				currentActive[i] = 0
+				i += 1
+			distance = resetDistance
+			distTarget = resetDistance
+			State = States.Nothing
+	
+	if State == States.FailedCombo:
+		distance = move_toward(distance,500,15)
+		if distance > 250:
+			pass
+	
+	angle += (speed + tmpSpeed) / 100
+	
+	
+	if State == States.InCombo:
+		distance = move_toward(distance,distTarget,0.1)
+	
+
+func _addNote(index):
+	$Notes.add_child(preload(\"res://Scenes/Note.tscn\").instantiate())
+	currentActive[index] = 1
+	notes = $Notes.get_children()
+	transitionBetweenNotes = 0
+	justSpawned = index
+	
+
+
+func _hit():
+		if a == 0:
+			State = States.InCombo
+		
+		if whichBeat == 3:
+			whichBeat = 0
+		var h = preload(\"res://Scenes/HitSpark.tscn\").instantiate()
+		add_child(h)
+		h.global_position = global_position + Vector2(randfn(-10,10),randfn(-10,10))
+		var r = preload(\"res://Scenes/RhythmNumber.tscn\").instantiate()
+		add_child(r)
+		r.global_position = Vector2(111,66)
+		var damage = Global._calculateDamageToEnemy(0,0,1)
+		if !a == 0:
+			damage /= 4
+			if fmod(a,4) == 0:
+				damage *= 2
+			if a == 15:
+				damage *= 3.5
+		damage = round(damage)
+		
+		r._changeLabel(str(damage),0)
+		$Hits.stream =load(pathsForAudio[whichBeat])
+		$Hits.play()
+		$Generic.pitch_scale = randf_range(0.9,1.1)
+		$Generic.play()
+		if a > 0:
+			if a == 16:
+				a = 0
+			_addNote(lookUpActives[a])
+			
+		a += 1
+		whichBeat += 1
+		tmpSpeed = 15 / (float(notes.size()) * 0.5)
+		
+		tmpSpeed = clamp(tmpSpeed,7,speed * 10)
+		if a == 16:
+			State = States.FinishedCombo
+			$Finisher.play()
+			
+		emit_signal(\"hit\",a,damage)
+		distTarget += changePerHit
+
+func _on_audio_stream_player_beat(position):
+	if !attack:
+		return
+	_hit()
+	if a == 16:
+		attack = false
+
+
+
+
+func _on_audio_stream_player_distance_from_beat(dist):
+	beatDifference = dist
+
+
+
+
+func _on_speed_value_changed(value):
+	speed = value
+
+
+func _on_distance_value_changed(value):
+	distance = value
+
+func _handleNoteMovement():
+	var activeIndex = 0
+	
+	var noteIndex = 0
+	# left under right over
+	for x in currentActive:
+		
+		if x == 1:
+			
+			
+			var localA = deg_to_rad(lookUpLA[activeIndex])
+			var lastLA = deg_to_rad(lookUpLA[activeIndex - 1])
+			
+			var n = notes[noteIndex]
+			# add interp, but i dont thiunk is project is survivng yo
+			var neededLocation = Vector2(cos(localA + angle),sin(localA + angle) * 0.25) * distance
+			var lastLocation = Vector2(cos(lastLA + angle),sin(lastLA + angle) * 0.25) * distance
+			
+			
+			
+			if State == States.FailedCombo:
+				fallVelocites[activeIndex] -= 0.3
+				
+				n.position.y -= fallVelocites[activeIndex]
+			else:
+			
+				if activeIndex == justSpawned:
+					n.position = lerp(lastLocation,neededLocation,transitionBetweenNotes)
+				else:
+					n.position = neededLocation
+				n.z_index = floor(n.position.y * 1)
+				
+				n.position = n.position.rotated(deg_to_rad(sin(angle * 1) * 15))
+				#n.rotation = (deg_to_rad(sin(angle * 1) * 15))
+				#n.position = n.position.rotated(deg_to_rad(xRot))
+			
+			
+			
+			
+			noteIndex += 1
+			
+		activeIndex += 1
+	
+"
+
+[node name="Center" type="Node2D"]
+script = SubResource("GDScript_cr4ps")
+speed = 1.5
+distance = 50.0
+pathsForAudio = ["res://SFX/PC/Lucas1-1.ogg", "res://SFX/PC/Lucas1-2.ogg", "res://SFX/PC/Lucas1-3.ogg"]
+changePerHit = 4
+
+[node name="Hits" type="AudioStreamPlayer" parent="."]
+bus = &"ClientPlayer"
+
+[node name="Finisher" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_doe7n")
+bus = &"ClientPlayer"
+
+[node name="Generic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_58nms")
+volume_db = -5.0
+bus = &"ClientPlayer"
+
+[node name="Notes" type="Node2D" parent="."]

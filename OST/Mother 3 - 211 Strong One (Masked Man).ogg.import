@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bxwn47bl512it"
+path="res://.godot/imported/Mother 3 - 211 Strong One (Masked Man).ogg-81d73edcf68322bca949ace3144f8814.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 211 Strong One (Masked Man).ogg"
+dest_files=["res://.godot/imported/Mother 3 - 211 Strong One (Masked Man).ogg-81d73edcf68322bca949ace3144f8814.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

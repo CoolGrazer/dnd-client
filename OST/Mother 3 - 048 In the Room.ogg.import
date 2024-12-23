@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dbnhnruipkj2o"
+path="res://.godot/imported/Mother 3 - 048 In the Room.ogg-11f8112a4f0d06ae10c4f3f7288fc279.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 048 In the Room.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 048 In the Room.ogg-11f8112a4f0d06ae10c4f3f7288fc279.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

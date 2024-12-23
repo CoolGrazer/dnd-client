@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdeo8tcnfl8vv"
+path="res://.godot/imported/Mother 3 - 215 Chapter 8.ogg-8b3d4364ade32d9a4ca03d95756353a8.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 215 Chapter 8.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 215 Chapter 8.ogg-8b3d4364ade32d9a4ca03d95756353a8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

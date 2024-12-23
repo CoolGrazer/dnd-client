@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://xeh1a3jom0tx"
+path="res://.godot/imported/Mother 3 - 078 Osohe Castle.ogg-3e24a4306a653ec3630b63b6143a1d1d.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 078 Osohe Castle.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 078 Osohe Castle.ogg-3e24a4306a653ec3630b63b6143a1d1d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

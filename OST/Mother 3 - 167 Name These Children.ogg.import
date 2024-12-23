@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdl5xa8j3vfjh"
+path="res://.godot/imported/Mother 3 - 167 Name These Children.ogg-833fd72347b474b0f690e42a85119f05.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 167 Name These Children.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 167 Name These Children.ogg-833fd72347b474b0f690e42a85119f05.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

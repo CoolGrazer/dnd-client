@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dc07wlvu1o71q"
+path="res://.godot/imported/Mother 3 - 148 Chapter 5.ogg-d2ddf5495906eba7aad2cae884e9520a.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 148 Chapter 5.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 148 Chapter 5.ogg-d2ddf5495906eba7aad2cae884e9520a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://di7858ntmv0ly"
+path="res://.godot/imported/Mother 3 - 216 Isn't This Such a Utopia_!.ogg-04888bffbdf9a447834cf3e6c8c38e9f.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 216 Isn't This Such a Utopia_!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 216 Isn't This Such a Utopia_!.ogg-04888bffbdf9a447834cf3e6c8c38e9f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

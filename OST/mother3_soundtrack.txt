@@ -1,0 +1,278 @@
+MOTHER 3 Soundtrack
+Created December 27, 2007
+http://starmen.net
+
+-----------
+
+NOTE: These OGG music files were taken from MOTHER 3's sound player using
+      a special build of sarsie's Mednafen emulator. The track titles use
+      the MOTHER 3 Fan Translation's current titles, but since that project
+      isn't complete yet, the final song titles may wind up slightly different
+      than what's listed here. But major changes aren't expected, so don't worry. 
+
+      Most good media players these days support the OGG format, but if for some
+      reason you're unable to play these files, a good place to look for
+      codecs/players for your operating system would be here:
+
+      http://www.vorbis.com/
+
+
+      Also, it appears there are several songs from the game that are missing
+      from the sound player. As we find these songs, we'll add them to the
+      MOTHER 3 music section at starmen.net, so check there if you're interested.
+
+------------
+
+Incidentally, here are the track names in a handy-dandy list.
+
+
+Let's Begin!
+Fun Naming
+Voice 1101
+Welcome!
+Alec's Log House 
+Mom's Hometown
+Save
+I'm a Mole Cricket!
+Enemy Encounter!
+Bothersome Guys
+You Won!
+Stand Up Strong
+As You Wish
+A Letter to You, Honey
+Carrier Pigeon
+Mysterious Flying Object
+LOG-O-TYPE
+F-F-Fire!
+Chapter 1
+Sound of Siren
+Together
+To Sunshine Forest
+Forest Prayer Sanctuary
+Forest of Flames
+The Enemy Attacks!
+Mr. Batty Twist
+The Water's Great
+Enter the Pigmasks!
+Dangerous Guys
+Troublesome Guys
+What?
+Back Beat Battle
+Gentle Rain
+Homely Yado Inn
+Letter from You, My Sweet
+Hard Rain
+Let's Go Together!
+Run, My Dog, Run!
+Somewhere, Someday
+Got a...
+Cautiously
+Mischievous Blues
+Tragic Reconstruction
+Confusion
+MOTHER 3 Love Theme 
+Sorrowful Tazmily
+Lonely Room
+In the Room
+Going Alone
+Fun Bazaar
+The Bread's Ready!
+Beyond the Sunshine Forest
+More Mischievous Blues
+Cumbersome Guys
+Mambo de Battle
+With My Father-in-Law
+Astonishing March
+Magypsy Party
+Much Better!
+Danger
+More Troublesome Guys
+Toppling March
+Big Enemy Encounter!
+Fight with Mecha-Drago
+Victorious...
+Level Up!
+Long Shadow
+Chapter 2
+Passing Down Secrets
+Mind of a Thief
+Suspicious Flying Object
+Huh?
+Zombeat
+Tough Zombeat
+Fate
+Accelerondo
+More Cumbersome Guys
+Osohe Castle
+More Dangerous Guys
+Back Beat Battle - Hard
+And El Mariachi
+Dry Guys
+Etude for Ghosts
+Got Somethin' Good!
+Ragtime Osohe
+Mambo de Battle Plus
+Serious
+Misplaced Revenge
+Polterg-g-g-geist
+Family Matters: 2nd Movement
+The Room Too Mysterious
+Fanfare of the Noble Vase
+Morning Already
+A Master, a Father, a Thief
+Piggy Guys
+Piggy Something
+Open Sesame Oil!
+Open Sesame Tofu!
+Learned PSI!
+Ode to Ancestors: 8th Movement
+Formidable Foe
+Butch and the Villagers
+Chapter 3
+Monkey's Love Song
+We're Going Together...?
+Bean Bean Pork Bean
+BzZzT! Even In My Dreams!
+The Peddler's Grand Speech
+Monkey's Delivery Service
+Dance!
+What Happened?!
+Laugh! Be Happy!
+Formidable Foes
+Audacious March
+Drago!?
+Thanks, Drago!
+Something Strange is Going On
+Love Theme (Reprise)
+Chapter 4
+A Railway in Our Village!
+Good Morning
+Reminded
+Hotel Yado
+My Wonderful Room
+Fun Shopping
+Happy Town?
+A Little Elegy
+What's Beyond the Tunnel?
+Even Drier Guys
+Murasaki Forest
+Whew, Hauling is Hard Work
+Good Work
+Stringent
+Ride the Ropeway
+Club Titiboo Theme
+Big Shot's Theme
+Girl's Room
+Shower Time Ballad
+The Attic's a Dungeon?!
+Intense Guys
+A 16-Beat Attack!
+A Marching Attack!
+Rock and Roll (Mild)
+Rock and Roll (Spicy)
+Lucky's Room
+Bon Voyage, Amigo
+What's That?!
+Chapter 5
+Oh No!
+Dangerous Highway
+Pork Bean Outta Gas
+Parking Area: Dur-T Cafe
+White (Owner's Recommendation)
+Fairies (Neckbeard's Recommend.)
+Resolve (Gum Guy's Recommend.)
+Blessing (Baldy's Recommendation)
+Adolescence (Toilet Cow's Rec.)
+Wasteful Anthem
+His Highness' Playroom
+His Highness' Memory: 2S
+His Highness' Memory: 2H
+MROB-6720M
+GENE163-1425
+Aria of Unease
+Chapter 6
+Sunflowers and Illusions
+Name These Children
+Mother?!
+A Tiny, Enormous Miracle
+Chapter 7
+Right Left Light Reft
+Quite the River
+Magypsy's Home, Sweetie-Pie
+Magypsy's Gone, Cutie-Pie
+Razor and Lipstick
+And Yet, El Mariachi
+Close Your Eyes, Sugar
+She Was Like a Sunflower
+Let's Ride the Train!
+The Green Train's Fun, Too!
+It's Chimera Research
+Pink Shell
+Pulling of the Needles
+More Audacious March
+Mole Cricket Elder
+Snowman
+His Highness' Theme
+Anthem of Destruction
+A Flying Whatchamacallit
+Mr. What's-His-Nose
+Mr. Saturn Theme Z
+Tragic Security
+Hustle for Pride
+War of the Words
+we humming
+Volcano! Inferno!
+Yokuba and InterpreTor
+Coffee Break
+Got Somethin' Great!
+Beach Combing
+O2 in Love
+Tanetane Island
+Red-Green-Yellow-Yellow
+Is it Just Me Or Are You Gorgeous?
+Strong One
+And Then There Were None
+Is Anyone There?
+Like Looking for a Dropped Pickle
+Chupi-Chupyoi for World Heritage
+Who?
+Strong One (Masked Man)
+True Welcome!
+Life's an Inner Circle Gap
+NPC Loves You!
+Chapter 8
+Isn't This Such a Utopia?!
+Blip-Blip High Score
+No Eating Crackers in the Cinema
+Beauty and Tasty
+New Pork Bossa
+Absolutely Filthy Apartments
+Leder's Gymnopedie
+Afro Bam-Babam
+Hey, Brother! Gimme an A!
+Theme of DCMC
+Samba de Combo
+Hippo
+Rain, Followed by a Harem
+Refreshing Toilets
+Under Construction...
+Automated...
+Even More Intense Guys
+Mini-Porky's Entrance
+Try Kind of Hard!
+And... Stop!
+Natural Killer Cyborg
+Time Passage
+A Certain Someone's Memories
+I am Porky
+Porky's Porkies
+Burst-In Rock 'n' Roll
+Master Porky's Theme
+Absolutely Safe Capsule
+Battle Against the Masked Man
+Memory of Mother
+It is Finished
+Phantasmagoric
+Curtain Call
+16 Melodies (Beginning)
+Memory of Life

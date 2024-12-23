@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvqwb2ottufe8"
+path="res://.godot/imported/Mother 3 - 103 Chapter 3.ogg-649c244cbf731e85940ab75ebb7e98b0.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 103 Chapter 3.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 103 Chapter 3.ogg-649c244cbf731e85940ab75ebb7e98b0.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c1mh5g7lknqea"
+path="res://.godot/imported/Mother 3 - 146 Bon Voyage, Amigo.ogg-30aca41b6a9c9ebefc9cca86c64712ef.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 146 Bon Voyage, Amigo.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 146 Bon Voyage, Amigo.ogg-30aca41b6a9c9ebefc9cca86c64712ef.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

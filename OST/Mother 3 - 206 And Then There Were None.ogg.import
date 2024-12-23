@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://ubb2pcaf326p"
+path="res://.godot/imported/Mother 3 - 206 And Then There Were None.ogg-a7c6f09b1090dc3b93bb017e496b0fba.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 206 And Then There Were None.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 206 And Then There Were None.ogg-a7c6f09b1090dc3b93bb017e496b0fba.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

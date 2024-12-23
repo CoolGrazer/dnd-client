@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://culxqgej2dedp"
+path="res://.godot/imported/Mother 3 - 038 Run, My Dog, Run!.ogg-8cae5ccf905b2cada0bb04a3033d6157.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 038 Run, My Dog, Run!.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 038 Run, My Dog, Run!.ogg-8cae5ccf905b2cada0bb04a3033d6157.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

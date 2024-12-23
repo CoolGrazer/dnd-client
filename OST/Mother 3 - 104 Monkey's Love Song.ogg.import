@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bnu4av6fmttvc"
+path="res://.godot/imported/Mother 3 - 104 Monkey's Love Song.ogg-808d6591d0cfdbc66f5520a986424b1d.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 104 Monkey's Love Song.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 104 Monkey's Love Song.ogg-808d6591d0cfdbc66f5520a986424b1d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

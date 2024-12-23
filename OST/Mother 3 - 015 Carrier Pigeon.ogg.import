@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d0oi6uljbmojx"
+path="res://.godot/imported/Mother 3 - 015 Carrier Pigeon.ogg-78056c010262d8b79997876aad5febc9.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 015 Carrier Pigeon.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 015 Carrier Pigeon.ogg-78056c010262d8b79997876aad5febc9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

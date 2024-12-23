@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0jr5x8chtm04"
+path="res://.godot/imported/Mother 3 - 133 Stringent.ogg-cafd335874b6c886388517878bbc6890.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 133 Stringent.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 133 Stringent.ogg-cafd335874b6c886388517878bbc6890.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

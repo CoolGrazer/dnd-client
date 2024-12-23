@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bhmcc5eflm1oj"
+path="res://.godot/imported/Mother 3 - 166 Sunflowers and Illusions.ogg-86b96ad77458cc61b04715d301aaf180.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 166 Sunflowers and Illusions.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 166 Sunflowers and Illusions.ogg-86b96ad77458cc61b04715d301aaf180.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

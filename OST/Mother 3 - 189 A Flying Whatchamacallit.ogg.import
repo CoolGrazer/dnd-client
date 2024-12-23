@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvvl7cicn4nwr"
+path="res://.godot/imported/Mother 3 - 189 A Flying Whatchamacallit.ogg-4121866e9fb212d2280db1ac25705b5a.oggvorbisstr"
+
+[deps]
+
+source_file="res://OST/Mother 3 - 189 A Flying Whatchamacallit.ogg"
+dest_files=["res://.godot/imported/Mother 3 - 189 A Flying Whatchamacallit.ogg-4121866e9fb212d2280db1ac25705b5a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

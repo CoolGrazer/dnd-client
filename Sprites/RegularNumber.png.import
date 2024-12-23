@@ -1,0 +1,22 @@
+[remap]
+
+importer="font_data_image"
+type="FontFile"
+uid="uid://bbdd7c8sn1m5"
+path="res://.godot/imported/RegularNumber.png-44923c363de3ab727ca305840e5801af.fontdata"
+
+[deps]
+
+source_file="res://Sprites/RegularNumber.png"
+dest_files=["res://.godot/imported/RegularNumber.png-44923c363de3ab727ca305840e5801af.fontdata"]
+
+[params]
+
+character_ranges=PackedStringArray("48-58")
+columns=30
+rows=1
+image_margin=Rect2i(0, 0, 0, 0)
+character_margin=Rect2i(0, 0, 0, 0)
+fallbacks=[]
+compress=true
+scaling_mode=2
